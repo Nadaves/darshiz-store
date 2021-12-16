@@ -1,0 +1,211 @@
+import React from "react";
+import styled from "styled-components";
+import { Badge } from "@material-ui/core";
+import Logo from "../assets/NoBG.png";
+import MainMenu from "../components/Menu";
+import LocalMallIcon from "@mui/icons-material/LocalMall";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
+const Container = styled.div`
+box-shadow:
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}`;
+const Wrapper = styled.div`
+  display: flex;
+  padding: 10px 10px 10px 10px;
+`;
+
+const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: 0.5em;
+  align-items: center;
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+`;
+
+const UserContainer = styled.div`
+  display: none;
+  @media (min-width: 900px) {
+    display: flex;
+  }
+`;
+
+const Center = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+`;
+const LogoContainer = styled.span`
+  @media (min-width: 900px) {
+  }
+`;
+
+const Right = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 900px) {
+    display: none;
+  }
+`;
+const ShoppingIconsContainer = styled.span`
+  display: flex;
+  width: 100%;
+  margin-top: 4em;
+  justify-content: space-between;
+  @media (min-width: 900px) {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0em;
+  }
+`;
+const Titles = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  width: 85%;
+  justify-content: space-evenly;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+
+const Title = styled.h1`
+  font-size: 20px;
+  font-weight: 600;
+  &:hover {
+    color: grey;
+  }
+`;
+const SecTitle = styled.h2`
+  font-size: 15px;
+  padding: 0.5em;
+  cursor: pointer;
+`;
+const Divider = styled.div`
+  width: 1px;
+  background-color: rgb(46, 51, 51);
+`;
+
+const Navbar = () => {
+  const user = useSelector((state) => state.user.currentUser);
+  const cart = useSelector((state) => state.cart);
+  const wishList = useSelector((state) => state.wishList);
+  return (
+    <Container>
+      <Wrapper>
+        <Left>
+          {!user && (
+            <UserContainer>
+              <Link
+                to="/register"
+                style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
+              >
+                <SecTitle>הרשמה</SecTitle>
+              </Link>
+              <Divider />
+              <Link
+                to="/login"
+                style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
+              >
+                <SecTitle>התחברות</SecTitle>
+              </Link>
+            </UserContainer>
+          )}
+          <ShoppingIconsContainer>
+            <Link
+              to="/cart"
+              style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
+            >
+              <Badge badgeContent={cart.quantity} color="secondary">
+                <LocalMallIcon />
+              </Badge>
+            </Link>
+            <Link
+              to="/favorites"
+              style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
+            >
+              <Badge badgeContent={wishList.quantity} color="secondary">
+                <FavoriteIcon />
+              </Badge>
+            </Link>
+          </ShoppingIconsContainer>
+        </Left>
+        <Center>
+          <LogoContainer>
+            <Link to="/">
+              <img src={Logo} alt="Drashiz baby" height="100px" />
+            </Link>
+          </LogoContainer>
+          <Titles>
+            <Link
+              to="/"
+              style={{
+                color: "rgb(46, 51, 51)",
+                textDecoration: "inherit",
+              }}
+            >
+              <Title>מוצרים</Title>
+            </Link>
+            <Link
+              to="/"
+              style={{
+                color: "rgb(46, 51, 51)",
+                textDecoration: "inherit",
+                fontWeight: "100",
+              }}
+            >
+              <Title>משלוחים</Title>
+            </Link>{" "}
+            <Link
+              to="/"
+              style={{
+                color: "rgb(46, 51, 51)",
+                textDecoration: "inherit",
+              }}
+            >
+              <Title>מבצעים</Title>
+            </Link>
+            <Link
+              to="/"
+              style={{
+                color: "rgb(46, 51, 51)",
+                textDecoration: "inherit",
+              }}
+            >
+              <Title>שאלות נפוצות</Title>
+            </Link>
+            <Link
+              to="/"
+              style={{
+                color: "rgb(46, 51, 51)",
+                textDecoration: "inherit",
+              }}
+            >
+              <Title>צור קשר</Title>
+            </Link>
+          </Titles>
+        </Center>
+        <Right>
+          <MainMenu />
+        </Right>
+      </Wrapper>
+    </Container>
+  );
+};
+
+export default Navbar;
