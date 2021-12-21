@@ -4,12 +4,14 @@ import styled from "styled-components";
 import { Button } from "@material-ui/core";
 import Slider from "../components/Slider";
 import Categories from "../components/Categories";
-import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Products from "../components/Products";
-import NewNav from "../components/Navbar/NewNav";
+import About from "../components/About/About";
+import "./Home.css";
+import { useMediaQuery } from "react-responsive";
 
 function Home() {
+  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
   const [annState, setAnnState] = useState(true);
 
   const Container = styled.div`
@@ -41,10 +43,9 @@ function Home() {
         </Container>
       ) : null}
       <Navbar />
-      <Slider />
+      {isMobile ? <About /> : <Slider />}
       <Categories />
       <Products />
-      <Newsletter />
       <Footer />
     </>
   );

@@ -3,13 +3,10 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import { MenuItem } from "@mui/material";
 import Logo from "../../assets/NoBG.png";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { shadows } from "@mui/system";
 
 export default function DenseAppBar() {
   const LinksContainer = styled.div`

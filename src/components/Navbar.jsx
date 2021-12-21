@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
 box-shadow:
              0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+             0.1em 0.1em 0.5em rgba(0,0,0,0.3);
 }`;
 const Wrapper = styled.div`
   display: flex;
@@ -21,12 +21,14 @@ const Wrapper = styled.div`
 const Left = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 35%;
   margin-left: 0.5em;
   align-items: center;
+  justify-content: center;
   @media (min-width: 900px) {
     display: flex;
     flex-direction: row-reverse;
+    width: 15%;
   }
 `;
 
@@ -42,10 +44,11 @@ const Center = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-
   @media (min-width: 900px) {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-right: 2em;
   }
 `;
 const LogoContainer = styled.span`
@@ -65,7 +68,6 @@ const Right = styled.div`
 const ShoppingIconsContainer = styled.span`
   display: flex;
   width: 100%;
-  margin-top: 4em;
   justify-content: space-between;
   @media (min-width: 900px) {
     display: flex;
@@ -76,9 +78,8 @@ const ShoppingIconsContainer = styled.span`
 const Titles = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  width: 85%;
+  width: 75%;
   justify-content: space-evenly;
-
   @media (max-width: 900px) {
     display: none;
   }
@@ -96,6 +97,16 @@ const SecTitle = styled.h2`
   padding: 0.5em;
   cursor: pointer;
 `;
+
+const LoginRegContainer = styled.div`
+  display: none;
+
+  @media (min-width: 900px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
+
 const Divider = styled.div`
   width: 1px;
   background-color: rgb(46, 51, 51);
@@ -199,6 +210,11 @@ const Navbar = () => {
               <Title>צור קשר</Title>
             </Link>
           </Titles>
+          <LoginRegContainer>
+            <SecTitle>הרשמה</SecTitle>
+            <SecTitle>|</SecTitle>
+            <SecTitle>התחברות</SecTitle>
+          </LoginRegContainer>
         </Center>
         <Right>
           <MainMenu />

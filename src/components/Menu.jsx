@@ -3,14 +3,18 @@ import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
 import PersonIcon from "@mui/icons-material/Person";
 import Logout from "@mui/icons-material/Logout";
+import LoyaltyIcon from "@mui/icons-material/Loyalty";
+import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import QuizIcon from "@mui/icons-material/Quiz";
+import CallIcon from "@mui/icons-material/Call";
+import CreateIcon from "@mui/icons-material/Create";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../redux/userRedux";
@@ -21,7 +25,10 @@ const TextContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  align-items: center;
+`;
+const IconContainer = styled.div`
+  width: 30%;
+  margin-left: 0.5em;
 `;
 
 function MainMenu() {
@@ -88,40 +95,50 @@ function MainMenu() {
         <MenuItem>
           <TextContainer>
             <Typography>מוצרים</Typography>
-            <FavoriteIcon />
           </TextContainer>
-        </MenuItem>
-        <MenuItem>
-          <TextContainer>
-            <Typography>משלוחים</Typography>
-            <ShoppingCartIcon />
-          </TextContainer>
+          <IconContainer>
+            <LoyaltyIcon />
+          </IconContainer>
         </MenuItem>
         <MenuItem>
           <TextContainer>
             <Typography>מבצעים</Typography>
-            <ShoppingCartIcon />
           </TextContainer>
+          <IconContainer>
+            <LocalFireDepartmentIcon />
+          </IconContainer>
+        </MenuItem>
+        <MenuItem>
+          <TextContainer>
+            <Typography>משלוחים</Typography>
+          </TextContainer>
+          <IconContainer>
+            <LocalShippingIcon />
+          </IconContainer>
         </MenuItem>
         <MenuItem>
           <TextContainer>
             <Typography>שאלות נפוצות</Typography>
-            <ShoppingCartIcon />
           </TextContainer>
+          <IconContainer>
+            <QuizIcon />
+          </IconContainer>
         </MenuItem>
         <MenuItem>
           <TextContainer>
             <Typography>צור קשר</Typography>
-            <ShoppingCartIcon />
           </TextContainer>
+          <IconContainer>
+            <CallIcon />
+          </IconContainer>
         </MenuItem>
         <Divider />
         {user && (
           <MenuItem onClick={handleLogout}>
-            <TextContainer>
-              התנתק
+            <TextContainer>התנתק</TextContainer>
+            <IconContainer>
               <Logout />
-            </TextContainer>
+            </IconContainer>
           </MenuItem>
         )}
         {!user && (
@@ -131,10 +148,10 @@ function MainMenu() {
               style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
             >
               <MenuItem>
-                <TextContainer>
-                  התחברות
+                <TextContainer>התחברות</TextContainer>
+                <IconContainer>
                   <PersonIcon />
-                </TextContainer>
+                </IconContainer>
               </MenuItem>
             </Link>
             <Link
@@ -142,10 +159,10 @@ function MainMenu() {
               style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
             >
               <MenuItem>
-                <TextContainer>
-                  הרשמה
-                  <PersonIcon />
-                </TextContainer>
+                <TextContainer>הרשמה</TextContainer>
+                <IconContainer>
+                  <CreateIcon />
+                </IconContainer>
               </MenuItem>
             </Link>
           </>

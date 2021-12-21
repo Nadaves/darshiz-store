@@ -3,12 +3,19 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   top: 0;
   position: relative;
-  width: 100vw;
-  height: 450px;
-  margin: 3px;
-  overflow: hidden;
+  margin: 3px auto;
+  max-width: 355px;
+  max-height: 380px;
+  @media screen and (min-width: 900px) {
+    margin: 3px;
+    max-width: none;
+    max-height: 450px;
+  }
 `;
 const Img = styled.img`
   height: 100%;

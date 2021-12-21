@@ -5,19 +5,10 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { SliderItems } from "./data";
 
 const Container = styled.div`
-  display: none;
-  @media (min-width: 900px) {
-    display: flex;
-    height: 40vh;
-    position: relative;
-    overflow: hidden;
-  }
-  @media (min-width: 1100px) {
-    display: flex;
-    height: 65vh;
-    position: relative;
-    overflow: hidden;
-  } ;
+  display: flex;
+  height: 65vh;
+  position: relative;
+  overflow: hidden;
 `;
 const Arrow = styled.div`
   position: absolute;
