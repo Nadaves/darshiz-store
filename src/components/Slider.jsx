@@ -48,6 +48,9 @@ const InfoContainer = styled.div`
 const Title = styled.h1`
   font-size: 80px;
   font-weight: 500;
+  @media screen and (max-width: 1065px) { 
+font-size: 50px;
+  }
 `;
 const Desc = styled.p`
   letter-spacing: 3px;

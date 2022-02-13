@@ -3,13 +3,15 @@ import { CategoriesData } from "./data";
 import CategoryItem from "./CategoryItem";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: 900px) {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    top: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 3px;
+
+  @media screen and (max-width: 1065px) {
+    grid-template-columns: auto auto;
+  }
+  @media screen and (max-width: 575px) {
+    grid-template-columns: auto;
   }
 `;
 const Categories = () => {

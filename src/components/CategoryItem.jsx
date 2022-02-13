@@ -8,15 +8,11 @@ const Container = styled.div`
   overflow: hidden;
   top: 0;
   position: relative;
-  margin: 3px auto;
-  max-width: 355px;
-  max-height: 380px;
-  @media screen and (min-width: 900px) {
-    margin: 3px;
-    max-width: none;
-    max-height: 450px;
-  }
+  max-height: 330px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 `;
+
 const Img = styled.img`
   height: 100%;
   width: 100%;

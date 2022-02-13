@@ -5,8 +5,10 @@ import { Button } from "@material-ui/core";
 import Slider from "../components/Slider";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
+import MobileFooter from "../components/MobileFooter";
 import Products from "../components/Products";
-import About from "../components/About/About";
+import TopAbout from "../components/About/TopAbout";
+import BottomAbout from "../components/About/BottomAbout";
 import "./Home.css";
 import { useMediaQuery } from "react-responsive";
 
@@ -28,12 +30,16 @@ function Home() {
       font-weight: 500;
     }
   `;
+
+  const HomeContainer = styled.div`
+    width: 100%;
+  `;
   const ButtonContainer = styled.span``;
   const handleClose = () => {
     setAnnState(!annState);
   };
   return (
-    <>
+    <HomeContainer>
       {annState ? (
         <Container>
           מבצע: משלוח חינם בקנייה מעל 250 ש"ח
@@ -43,11 +49,12 @@ function Home() {
         </Container>
       ) : null}
       <Navbar />
-      {isMobile ? <About /> : <Slider />}
+      {isMobile ? <TopAbout /> : <Slider />}
       <Categories />
-      <Products />
-      <Footer />
-    </>
+      <BottomAbout />
+      {/* <Products /> */}
+      {isMobile ? <MobileFooter /> : <Footer />}
+    </HomeContainer>
   );
 }
 

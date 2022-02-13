@@ -1,0 +1,26 @@
+.InnerText {
+  direction: rtl;
+}
+
+.BottomContainer {
+  background-color: rgba(223, 215, 213, 255);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Logo {
+  font-size: 30px;
+}
+
+.IconsContainer {
+  margin: 10px 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.SocialItem {
+  cursor: pointer;
+}

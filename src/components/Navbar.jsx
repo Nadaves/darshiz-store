@@ -7,6 +7,7 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import "./Navbar.css"
 
 const Container = styled.div`
 box-shadow:
@@ -19,16 +20,12 @@ const Wrapper = styled.div`
 `;
 
 const Left = styled.div`
+  flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  width: 35%;
   margin-left: 0.5em;
-  align-items: center;
-  justify-content: center;
   @media (min-width: 900px) {
     display: flex;
     flex-direction: row-reverse;
-    width: 15%;
   }
 `;
 
@@ -43,8 +40,8 @@ const Center = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   @media (min-width: 900px) {
+    flex-grow: 2;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -52,23 +49,24 @@ const Center = styled.div`
   }
 `;
 const LogoContainer = styled.span`
-  @media (min-width: 900px) {
-  }
+  flex-grow: 2;
 `;
 
 const Right = styled.div`
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   @media (min-width: 900px) {
     display: none;
   }
 `;
 const ShoppingIconsContainer = styled.span`
+  flex-grow: 1;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
   @media (min-width: 900px) {
     display: flex;
     justify-content: space-evenly;
@@ -139,6 +137,7 @@ const Navbar = () => {
           )}
           <ShoppingIconsContainer>
             <Link
+              className="ShoppingIcon"
               to="/cart"
               style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
             >
@@ -147,6 +146,7 @@ const Navbar = () => {
               </Badge>
             </Link>
             <Link
+              className="ShoppingIcon"
               to="/favorites"
               style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
             >

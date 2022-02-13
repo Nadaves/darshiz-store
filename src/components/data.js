@@ -1,17 +1,19 @@
+import Darshiz from "../assets/Darshiz.jpg"
+
 export const SliderItems = [
   {
     id: 1,
     img: "https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    title: "מוצרים בעבודת יד",
-    desc: "מוצרים איכותיים ושימושיים לתינוקות, בעבודת יד",
-    link: "קנו עכשיו",
+    title: "ברוכים הבאים לדרשיז",
+    desc: "כאן תוכלו למצוא מגוון רחב של מוצרי תינוקות איכותיים ומפנקים בעבודת יד. כל מוצרי הבד נתפרים ממיטב חומרי הגלם ותוך תשומת לב מירבית לפרטים ולרמת הגימור",
+    link: "לצפייה במוצרים",
     bg: "255, 254, 240",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/2456327/pexels-photo-2456327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    title: "הכי טוב, בשבילם",
-    desc: "מוצר חלק-חלק כמו טוסיק של תינוק, בעבודת יד",
+    img: Darshiz,
+    title: "קצת עליי",
+    desc: "אני חןשלוז ואני אוהבת סופגניות ולשתות מים בחורף",
     link: "קנו עכשיו",
     bg: "255, 240, 240",
   },
@@ -36,6 +38,14 @@ export const SliderItems = [
     img: "https://images.pexels.com/photos/3975656/pexels-photo-3975656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     title: "אמא עם לפטופ",
     desc: "אמא שלו עובדת בהייטקס מהבית",
+    link: "קנו עכשיו",
+    bg: "255, 240, 240",
+  },
+  {
+    id: 6,
+    img: "https://images.pexels.com/photos/2456327/pexels-photo-2456327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    title: "הכי טוב, בשבילם",
+    desc: "מוצר חלק-חלק כמו טוסיק של תינוק, בעבודת יד",
     link: "קנו עכשיו",
     bg: "255, 240, 240",
   },
