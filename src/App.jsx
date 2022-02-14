@@ -4,6 +4,8 @@ import SingleProduct from "./pages/SingleProduct";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import Shipping from "./pages/Shipping";
+import FAQ from "./pages/FAQ";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 const App = () => {
   const user = false;
@@ -14,17 +16,19 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route
             exact
-            path="/login"
+            path="/Login"
             element={user ? <Navigate to="/" /> : <Login />}
           />
           <Route
             exact
-            path="/register"
+            path="/Register"
             element={user ? <Navigate to="/" /> : <Register />}
           />
-          <Route path="/products/:category" element={<ProductList />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/Products/:category" element={<ProductList />} />
+          <Route path="/Cart" element={<Cart />} />
           <Route path="/productShowcase/:product" element={<SingleProduct />} />
+          <Route path="/Shipping" element={<Shipping />} />
+          <Route path="/FAQ" element={<FAQ />} />
         </Routes>
       </BrowserRouter>
     </>

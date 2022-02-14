@@ -6,7 +6,7 @@ import Slider from "../components/Slider";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
-import Products from "../components/Products";
+// import Products from "../components/Products";
 import TopAbout from "../components/About/TopAbout";
 import BottomAbout from "../components/About/BottomAbout";
 import "./Home.css";
@@ -34,27 +34,30 @@ function Home() {
   const HomeContainer = styled.div`
     width: 100%;
   `;
+
   const ButtonContainer = styled.span``;
   const handleClose = () => {
     setAnnState(!annState);
   };
   return (
-    <HomeContainer>
-      {annState ? (
-        <Container>
-          מבצע: משלוח חינם בקנייה מעל 250 ש"ח
-          <ButtonContainer>
-            <Button onClick={handleClose}>X</Button>
-          </ButtonContainer>
-        </Container>
-      ) : null}
-      <Navbar />
-      {isMobile ? <TopAbout /> : <Slider />}
-      <Categories />
-      <BottomAbout />
-      {/* <Products /> */}
-      {isMobile ? <MobileFooter /> : <Footer />}
-    </HomeContainer>
+    <>
+      <HomeContainer>
+        {annState ? (
+          <Container>
+            מבצע: משלוח חינם בקנייה מעל 250 ש"ח
+            <ButtonContainer>
+              <Button onClick={handleClose}>X</Button>
+            </ButtonContainer>
+          </Container>
+        ) : null}
+        <Navbar />
+        {isMobile ? <TopAbout /> : <Slider />}
+        <Categories />
+        <BottomAbout />
+        {/* <Products /> */}
+        {isMobile ? <MobileFooter /> : <Footer />}
+      </HomeContainer>
+    </>
   );
 }
 

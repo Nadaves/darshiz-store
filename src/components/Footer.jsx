@@ -2,18 +2,13 @@ import styled from "styled-components";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import MailIcon from "@mui/icons-material/Mail";
-import InfoIcon from "@mui/icons-material/Info";
-import PinterestIcon from "@mui/icons-material/Pinterest";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Container = styled.div`
   display: flex;
   background-color: rgb(223, 215, 213);
-  color: black;
-  height: 100%;
   justify-content: space-evenly;
-  padding-top: 30px;
+  padding-top: 5%;
   padding-bottom: 5%;
 `;
 
@@ -34,32 +29,19 @@ const LinksContainer = styled.div`
 const SocialItem = styled.div`
   cursor: pointer;
 `;
-const Center = styled.div`
-  direction: rtl;
-`;
-const CenterContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`;
-const CenterItem = styled.div`
-  cursor: pointer;
-  flex: 1;
-`;
 const Right = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 5%;
+  justify-content: space-evenly;
 `;
 const RightItem = styled.div`
-display: flex;
-width: 100%;
-align-items: center;
-justify-content: flex-end;
-font-weight: 100;
-display: flex
-margin: 3px;
+  display: flex;
+  margin: 0.2rem;
+`;
+
+const ItemSeperation = styled.div`
+  margin-right: 0.5rem;
 `;
 const Title = styled.h1`
 font-weight: 100;
@@ -80,23 +62,15 @@ const Footer = () => {
           </SocialItem>
         </LinksContainer>
       </Left>
-      <Center>
-        <Title>שירות לקוחות</Title>
-        <CenterContainer>
-          <CenterItem>משלוחים</CenterItem>
-          <CenterItem>החזרות</CenterItem>
-          <CenterItem>לקריאה נוספת</CenterItem>
-        </CenterContainer>
-      </Center>
       <Right>
         <Title>יצירת קשר</Title>
         <RightItem>
-          Contact@Darshiz-baby.co.il
+          <ItemSeperation>Contact@darshiz.co.il</ItemSeperation>
           <MailIcon />
         </RightItem>
         <RightItem>
-          054-5442928
-          <LocalPhoneIcon />
+          <ItemSeperation>054-5442928</ItemSeperation>
+          <WhatsAppIcon />
         </RightItem>
       </Right>
     </Container>

@@ -1,13 +1,14 @@
-import React from "react";
 import styled from "styled-components";
 import { Badge } from "@material-ui/core";
 import Logo from "../assets/NoBG.png";
 import MainMenu from "../components/Menu";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "./Navbar.css"
+import "./Navbar.css";
+import FloatingWhatsApp from "react-floating-whatsapp";
+import Darshiz from "../assets/Darshiz.jpg";
+import { useMediaQuery } from "react-responsive";
 
 const Container = styled.div`
 box-shadow:
@@ -19,13 +20,19 @@ const Wrapper = styled.div`
   padding: 10px 10px 10px 10px;
 `;
 
+const WhatsappCont = styled.div`
+  display: flex;
+  z-index: 100;
+`;
+
 const Left = styled.div`
   flex-grow: 1;
   display: flex;
-  margin-left: 0.5em;
   @media (min-width: 900px) {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -38,26 +45,22 @@ const UserContainer = styled.div`
 
 const Center = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
   align-items: center;
   @media (min-width: 900px) {
-    flex-grow: 2;
-    display: flex;
+    flex-grow: 15;
     flex-direction: row-reverse;
     justify-content: flex-start;
     margin-right: 2em;
   }
 `;
-const LogoContainer = styled.span`
-  flex-grow: 2;
-`;
 
 const Right = styled.div`
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   @media (min-width: 900px) {
     display: none;
   }
@@ -65,14 +68,13 @@ const Right = styled.div`
 const ShoppingIconsContainer = styled.span`
   flex-grow: 1;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
   @media (min-width: 900px) {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 0em;
+    margin-left: 2em;
   }
 `;
+
 const Titles = styled.div`
   display: flex;
   flex-direction: row-reverse;
@@ -96,27 +98,29 @@ const SecTitle = styled.h2`
   cursor: pointer;
 `;
 
-const LoginRegContainer = styled.div`
-  display: none;
-
-  @media (min-width: 900px) {
-    display: flex;
-    justify-content: flex-end;
-  }
-`;
-
 const Divider = styled.div`
   width: 1px;
   background-color: rgb(46, 51, 51);
 `;
 
 const Navbar = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
   const user = useSelector((state) => state.user.currentUser);
   const cart = useSelector((state) => state.cart);
-  const wishList = useSelector((state) => state.wishList);
   return (
     <Container>
       <Wrapper>
+        {!isMobile ? (
+          <WhatsappCont>
+            <FloatingWhatsApp
+              chatMessage="?היי! איך אפשר לעזור"
+              accountName="דרשיז"
+              avatar={Darshiz}
+              phoneNumber="+972545442928"
+              styles={{ zIndex: 100 }}
+            />
+          </WhatsappCont>
+        ) : null}
         <Left>
           {!user && (
             <UserContainer>
@@ -145,23 +149,12 @@ const Navbar = () => {
                 <LocalMallIcon />
               </Badge>
             </Link>
-            <Link
-              className="ShoppingIcon"
-              to="/favorites"
-              style={{ color: "rgb(46, 51, 51)", textDecoration: "inherit" }}
-            >
-              <Badge badgeContent={wishList.quantity} color="secondary">
-                <FavoriteIcon />
-              </Badge>
-            </Link>
           </ShoppingIconsContainer>
         </Left>
         <Center>
-          <LogoContainer>
-            <Link to="/">
-              <img src={Logo} alt="Drashiz baby" height="100px" />
-            </Link>
-          </LogoContainer>
+          <Link to="/">
+            <img src={Logo} alt="Drashiz baby" height="100px" />
+          </Link>
           <Titles>
             <Link
               to="/"
@@ -177,22 +170,22 @@ const Navbar = () => {
               style={{
                 color: "rgb(46, 51, 51)",
                 textDecoration: "inherit",
+              }}
+            >
+              <Title>מבצעים</Title>
+            </Link>
+            <Link
+              to="/Shipping"
+              style={{
+                color: "rgb(46, 51, 51)",
+                textDecoration: "inherit",
                 fontWeight: "100",
               }}
             >
               <Title>משלוחים</Title>
             </Link>{" "}
             <Link
-              to="/"
-              style={{
-                color: "rgb(46, 51, 51)",
-                textDecoration: "inherit",
-              }}
-            >
-              <Title>מבצעים</Title>
-            </Link>
-            <Link
-              to="/"
+              to="/FAQ"
               style={{
                 color: "rgb(46, 51, 51)",
                 textDecoration: "inherit",
@@ -210,11 +203,6 @@ const Navbar = () => {
               <Title>צור קשר</Title>
             </Link>
           </Titles>
-          <LoginRegContainer>
-            <SecTitle>הרשמה</SecTitle>
-            <SecTitle>|</SecTitle>
-            <SecTitle>התחברות</SecTitle>
-          </LoginRegContainer>
         </Center>
         <Right>
           <MainMenu />

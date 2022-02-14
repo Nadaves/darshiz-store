@@ -5,15 +5,11 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import "./MobileFooter.css";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  border: `1px solid rgba(0, 0, 0, .25)`,
+  border: `1px solid ${theme.palette.divider}`,
   "&:not(:last-child)": {
     borderBottom: 0,
   },
@@ -31,12 +27,8 @@ const AccordionSummary = styled((props) => (
   backgroundColor:
     theme.palette.mode === "dark"
       ? "rgba(255, 255, 255, .05)"
-      : "rgba(223,215,213,255)",
-  flexDirection: "row",
-  direction: "rtl",
-  "& .MuiAccordionSummary-expandIconWrapper": {
-    transform: "rotate(180deg)",
-  },
+      : "rgba(0, 0, 0, .03)",
+  flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
   },
@@ -47,11 +39,11 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: "1px solid rgba(0, 0, 0, .25)",
+  borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
 export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = React.useState(null);
+  const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -60,15 +52,14 @@ export default function CustomizedAccordions() {
   return (
     <div>
       <Accordion
-        className="Slot"
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>שאלות נפוצות</Typography>
+          <Typography>Collapsible Group Item #1</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography className="InnerText">
+          <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
             dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
@@ -79,13 +70,12 @@ export default function CustomizedAccordions() {
       <Accordion
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
-        className="Slot"
       >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>משלוחים ומדיניות</Typography>
+          <Typography>Collapsible Group Item #2</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography className="InnerText">
+          <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
             dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
@@ -96,13 +86,12 @@ export default function CustomizedAccordions() {
       <Accordion
         expanded={expanded === "panel3"}
         onChange={handleChange("panel3")}
-        className="Slot"
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>צור קשר</Typography>
+          <Typography>Collapsible Group Item #3</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography className="InnerText">
+          <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
             dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
@@ -110,20 +99,6 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <div className="BottomContainer">
-        <div className="Logo">Dasrhiz baby.</div>
-        <div className="IconsContainer">
-          <div className="SocialItem">
-            <InstagramIcon />
-          </div>
-          <div className="SocialItem">
-            <FacebookIcon />
-          </div>
-          <div className="SocialItem">
-            <WhatsAppIcon />
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

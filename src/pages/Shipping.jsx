@@ -1,0 +1,79 @@
+import React from "react";
+import "./Shipping.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import MobileFooter from "../components/MobileFooter";
+
+function Shipping() {
+  return (
+    <>
+      <Navbar />
+      <div class="background">
+        <div class="container">
+          <div class="panel pricing-table">
+            <div class="pricing-plan">
+              <img
+                src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png"
+                alt=""
+                class="pricing-img"
+              />
+              <div class="pricing-spacing">
+                <h2 class="pricing-header">איסוף עצמי</h2>
+                <ul class="pricing-features">
+                  <li class="pricing-features-item">איסוף עצמי מגבעת שמואל</li>
+                </ul>
+              </div>
+              <span class="pricing-price">₪0</span>
+            </div>
+
+            <div class="pricing-plan">
+              <img
+                src="https://s28.postimg.cc/ju5bnc3x9/plane.png"
+                alt=""
+                class="pricing-img"
+              />
+              <div class="pricing-spacing">
+                <h2 class="pricing-header">שליח עד הבית</h2>
+                <ul class="pricing-features">
+                  <li class="pricing-features-item">משלוח לכל הארץ</li>
+                  <li class="pricing-features-item">עד 14 ימי עסקים*</li>
+                </ul>
+              </div>
+              <span class="pricing-price">₪30</span>
+            </div>
+
+            <div class="pricing-plan">
+              <img
+                src="https://s21.postimg.cc/tpm0cge4n/space-ship.png"
+                alt=""
+                class="pricing-img"
+              />
+              <div class="pricing-spacing">
+                <h2 class="pricing-header">משלוח אקספרס</h2>
+                <ul class="pricing-features">
+                  <li class="pricing-features-item">מוגבל לאזור גוש דן</li>
+                  <li class="pricing-features-item">עד שלושה ימי עסקים*</li>
+                </ul>
+              </div>
+              <span class="pricing-price">₪50</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <h4>נהלי משלוחים</h4>
+        <p class="text">
+          1. משלוח עם שליח עד הבית ומשלוח אקספרס נעשים באמצעות ספק חיצוני. "
+          דרשיז" אינה נושאת באחריות לכל עיכוב או תקלה באספקת המוצר מרגע שילוח
+        </p>
+        <p>
+          2. הזמנים הרשומים מתייחסים להזמנת מוצר שנמצא במלאי. עבור מוצר שאינו
+          במלאי, זמן האספקה עשוי להתארך
+        </p>
+      </div>
+      <Footer />
+    </>
+  );
+}
+
+export default Shipping;

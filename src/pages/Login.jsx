@@ -9,7 +9,6 @@ import { Navigate } from "react-router-dom";
 
 const Container = styled.div`
   height: 100vh;
-  width: 100vw;
   background-image: url("https://images.pexels.com/photos/461035/pexels-photo-461035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
   background-position: center;
@@ -19,13 +18,11 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 20px;
+  padding: 2rem;
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
-  height: 50%;
-  width: 50%;
   background-color: rgba(0, 0, 0, 0.65);
   border: 1px solid black;
   border-radius: 15px;
@@ -33,10 +30,6 @@ const Wrapper = styled.div`
 `;
 const Logo = styled.img`
   height: 120px;
-`;
-const Title = styled.div`
-  font-size: 30px;
-  color: white;
 `;
 const Form = styled.div`
   display: flex;
@@ -81,7 +74,6 @@ const Login = () => {
     <Container>
       <Wrapper>
         <Logo src={NoBG} />
-        <Title>התחברות לאתר</Title>
         <Form>
           <Input
             placeholder="דואר אלקטרוני"
