@@ -94,9 +94,8 @@ html {
 
 .pricing-features {
   direction: rtl;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin: 50px 0 25px;
+  font-weight: 500;
+  margin: 50px 0 25px 10px;
 }
 
 .pricing-features-item {

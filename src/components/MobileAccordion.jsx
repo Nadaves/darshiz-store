@@ -5,10 +5,10 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import MobileFooter from "../components/MobileFooter";
-import { useMediaQuery } from "react-responsive";
+import "./MobileFooter.css";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -52,7 +52,6 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState(null);
-  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -60,24 +59,13 @@ export default function CustomizedAccordions() {
 
   return (
     <div>
-      <Navbar />
-      <div
-        style={{
-          backgroundImage:
-            "url(https://images.pexels.com/photos/461035/pexels-photo-461035.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)",
-          height: "300px",
-          backgroundPosition: "center",
-        }}
-      ></div>
       <Accordion
         className="Slot"
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography style={{ fontWeight: "700" }}>
-            אם הכיש אותי כלב, אבל ממש חזק, יש מה לעשות עם זה?
-          </Typography>
+          <Typography>שאלות נפוצות</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className="InnerText">
@@ -94,9 +82,7 @@ export default function CustomizedAccordions() {
         className="Slot"
       >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography style={{ fontWeight: "700" }}>
-            אני מעוניין במוצר שכרגע לא קיים במלאי. מה ניתן לעשות?
-          </Typography>
+          <Typography>משלוחים ומדיניות</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className="InnerText">
@@ -113,9 +99,7 @@ export default function CustomizedAccordions() {
         className="Slot"
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography style={{ fontWeight: "700" }}>
-            איך מגיעים מפה לאלנבי\הר סיני?
-          </Typography>
+          <Typography>צור קשר</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className="InnerText">
@@ -126,65 +110,6 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion
-        expanded={expanded === "panel4"}
-        onChange={handleChange("panel4")}
-        className="Slot"
-      >
-        <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography style={{ fontWeight: "700" }}>
-            האם ניתן לבצע איסוף עצמי?{" "}
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography className="InnerText">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === "panel5"}
-        onChange={handleChange("panel5")}
-        className="Slot"
-      >
-        <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-          <Typography style={{ fontWeight: "700" }}>
-            קיבלתי נחשוש פגום (הוא מתנהג כמו חתלתוש){" "}
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography className="InnerText">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === "panel6"}
-        onChange={handleChange("panel6")}
-        className="Slot"
-      >
-        <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
-          <Typography style={{ fontWeight: "700" }}>
-            כמה עולה משלוח עד הבית?{" "}
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography className="InnerText">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <div style={{ backgroundColor: "rgba(223,215,213,255)" }}></div>
-      {isMobile ? <MobileFooter /> : <Footer />}
     </div>
   );
 }

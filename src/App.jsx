@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Shipping from "./pages/Shipping";
 import FAQ from "./pages/FAQ";
+import Testimonials from "./pages/Testimonials";
+
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 const App = () => {
   const user = false;
@@ -29,6 +31,7 @@ const App = () => {
           <Route path="/productShowcase/:product" element={<SingleProduct />} />
           <Route path="/Shipping" element={<Shipping />} />
           <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/Testimonials" element={<Testimonials />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -6,6 +6,7 @@ import Slider from "../components/Slider";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
+import MobileAccordion from "../components/MobileAccordion";
 // import Products from "../components/Products";
 import TopAbout from "../components/About/TopAbout";
 import BottomAbout from "../components/About/BottomAbout";
@@ -55,7 +56,14 @@ function Home() {
         <Categories />
         <BottomAbout />
         {/* <Products /> */}
-        {isMobile ? <MobileFooter /> : <Footer />}
+        {isMobile ? (
+          <>
+            <MobileAccordion />
+            <MobileFooter />
+          </>
+        ) : (
+          <Footer />
+        )}
       </HomeContainer>
     </>
   );

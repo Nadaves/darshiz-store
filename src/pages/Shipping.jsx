@@ -3,8 +3,11 @@ import "./Shipping.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
+import { useMediaQuery } from "react-responsive";
 
 function Shipping() {
+  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
+
   return (
     <>
       <Navbar />
@@ -71,7 +74,7 @@ function Shipping() {
           במלאי, זמן האספקה עשוי להתארך
         </p>
       </div>
-      <Footer />
+      {isMobile ? <MobileFooter /> : <Footer />}
     </>
   );
 }
