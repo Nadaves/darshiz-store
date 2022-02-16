@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
+import MobileFooter from "../components/MobileFooter";
 import Footer from "../components/Footer";
 import CartProduct from "../components/CartProduct";
 import { useSelector, useDispatch } from "react-redux";
 import { CartReset } from "../redux/cartRedux";
 import { Link } from "react-router-dom";
 import ShoppingBag from "../assets/Bag.png";
+import { useMediaQuery } from "react-responsive";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -119,12 +121,12 @@ const CheckOutButton = styled.button`
   cursor: pointer;
 `;
 
-const CartResetBtn = styled.button`
-  width: 100px;
-  height: 50px;
-  background-color: red;
-  color: white;
-`;
+// const CartResetBtn = styled.button`
+//   width: 100px;
+//   height: 50px;
+//   background-color: red;
+//   color: white;
+// `;
 
 const Img = styled.img`
   max-height: 300px;
@@ -139,6 +141,7 @@ const EmptyCartContainer = styled.div`
 `;
 
 const Cart = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
   const Delivery = 25;
   const dispatch = useDispatch();
   const Cart = useSelector((state) => state.cart);
@@ -154,9 +157,8 @@ const Cart = () => {
             <TopButton>המשיכו בקניות</TopButton>
           </Link>
           <TopText>מוצרים בעגלה ({Cart.quantity})</TopText>
-          <TopText>מוצרים שאהבתם (0)</TopText>
           <TopButton type={"filled"}>מעבר לתשלום</TopButton>
-          <CartResetBtn onClick={handleReset}>איפוס עגלה</CartResetBtn>
+          {/* <CartResetBtn onClick={handleReset}>איפוס עגלה</CartResetBtn> */}
         </Top>
         <Bottom>
           <BottomRight>
@@ -167,7 +169,7 @@ const Cart = () => {
           <BottomLeft>
             <CheckoutLayout>
               <Form>
-                <Title>העגלה שלכם</Title>
+                <Title>הסל שלכם</Title>
                 <LineItem>
                   <SecTitle>סיכום ביניים</SecTitle>
                   <Money>₪{Cart.total}</Money>
@@ -186,7 +188,7 @@ const Cart = () => {
           </BottomLeft>
         </Bottom>
       </Wrapper>
-      <Footer />
+      {isMobile ? <MobileFooter /> : <Footer />}
     </Container>
   ) : (
     <Container>
@@ -197,18 +199,17 @@ const Cart = () => {
             <TopButton>המשיכו בקניות</TopButton>
           </Link>
           <TopText>מוצרים בעגלה ({Cart.quantity})</TopText>
-          <TopText>מוצרים שאהבתם (0)</TopText>
-          <CartResetBtn onClick={handleReset}>איפוס עגלה</CartResetBtn>
+          {/* <CartResetBtn onClick={handleReset}>איפוס עגלה</CartResetBtn> */}
         </Top>
         <Hr />
         <Bottom>
           <EmptyCartContainer>
-            <Title>העגלה שלכם ריקה</Title>
+            <Title>הסל שלכם ריק</Title>
             <Img alt="lost" src={ShoppingBag} />
           </EmptyCartContainer>
         </Bottom>
       </Wrapper>
-      <Footer />
+      {isMobile ? <MobileFooter /> : <Footer />}
     </Container>
   );
 };

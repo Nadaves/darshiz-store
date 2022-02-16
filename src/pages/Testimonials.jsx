@@ -6,6 +6,15 @@ import { Carousel } from "react-responsive-carousel";
 import MobileFooter from "../components/MobileFooter";
 import { useMediaQuery } from "react-responsive";
 import "./Testimonials.css";
+import styled from "styled-components";
+
+const Container = styled.div`
+  height: 60vh;
+  background-color: rgb(223, 215, 213);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 function Testimonials() {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
@@ -13,50 +22,53 @@ function Testimonials() {
   return (
     <>
       <Navbar />
-      <Carousel
-        showArrows={true}
-        infiniteLoop={true}
-        showThumbs={false}
-        showStatus={false}
-        autoPlay={true}
-        interval={6100}
-      >
-        <div>
-          <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--0SCWkYwS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/9dhr4cw2s0skgfig8qnw.png" />
-          <div className="myCarousel">
-            <h3>Shirley Fultz</h3>
-            <h4>Designer</h4>
-            <p>
-              It's freeing to be able to catch up on customized news and not be
-              distracted by a social media element on the same site
-            </p>
+      <Container class="CarouselContainer">
+        <Carousel
+          showArrows={true}
+          infiniteLoop={true}
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={false}
+          autoPlay={true}
+          interval={6100}
+        >
+          <div>
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--0SCWkYwS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/9dhr4cw2s0skgfig8qnw.png" />
+            <div className="myCarousel">
+              <h3>Shirley Fultz</h3>
+              <h4>Designer</h4>
+              <p>
+                It's freeing to be able to catch up on customized news and not
+                be distracted by a social media element on the same site
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div>
-          <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--nSI8V6RE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/81co8nilff5r9eer3xga.png" />
-          <div className="myCarousel">
-            <h3>Daniel Keystone</h3>
-            <h4>Designer</h4>
-            <p>
-              The simple and intuitive design makes it easy for me use. I highly
-              recommend Fetch to my peers.
-            </p>
+          <div>
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--nSI8V6RE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/81co8nilff5r9eer3xga.png" />
+            <div className="myCarousel">
+              <h3>Daniel Keystone</h3>
+              <h4>Designer</h4>
+              <p>
+                The simple and intuitive design makes it easy for me use. I
+                highly recommend Fetch to my peers.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div>
-          <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--gRFMHqWs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/1xwiaya5i7wweic3pz96.png" />
-          <div className="myCarousel">
-            <h3>Theo Sorel</h3>
-            <h4>Designer</h4>
-            <p>
-              I enjoy catching up with Fetch on my laptop, or on my phone when
-              I'm on the go!
-            </p>
+          <div>
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--gRFMHqWs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/1xwiaya5i7wweic3pz96.png" />
+            <div className="myCarousel">
+              <h3>Theo Sorel</h3>
+              <h4>Designer</h4>
+              <p>
+                I enjoy catching up with Fetch on my laptop, or on my phone when
+                I'm on the go!
+              </p>
+            </div>
           </div>
-        </div>
-      </Carousel>
+        </Carousel>
+      </Container>
       {isMobile ? <MobileFooter /> : <Footer />}
     </>
   );
