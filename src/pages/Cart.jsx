@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 import MobileFooter from "../components/MobileFooter";
 import Footer from "../components/Footer";
 import CartProduct from "../components/CartProduct";
-import { useSelector, useDispatch } from "react-redux";
-import { CartReset } from "../redux/cartRedux";
+import { useSelector } from "react-redux";
+// import { CartReset } from "../redux/cartRedux";
 import { Link } from "react-router-dom";
 import ShoppingBag from "../assets/Bag.png";
 import { useMediaQuery } from "react-responsive";
@@ -143,11 +143,11 @@ const EmptyCartContainer = styled.div`
 const Cart = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
   const Delivery = 25;
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const Cart = useSelector((state) => state.cart);
-  const handleReset = () => {
-    dispatch(CartReset());
-  };
+  // const handleReset = () => {
+  //   dispatch(CartReset());
+  // };
   return Cart.quantity > 0 ? (
     <Container>
       <Navbar />

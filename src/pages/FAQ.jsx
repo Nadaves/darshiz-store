@@ -76,7 +76,7 @@ export default function CustomizedAccordions() {
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography style={{ fontWeight: "700" }}>
-            אם הכיש אותי כלב, אבל ממש חזק, יש מה לעשות עם זה?
+            האם המוצרים מתאימים גם לתינוקות מתחת לגיל שנה?{" "}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -114,7 +114,7 @@ export default function CustomizedAccordions() {
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
           <Typography style={{ fontWeight: "700" }}>
-            איך מגיעים מפה לאלנבי\הר סיני?
+            האם יש מבצעים ברכישת מספר מוצרים?{" "}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -152,7 +152,7 @@ export default function CustomizedAccordions() {
       >
         <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
           <Typography style={{ fontWeight: "700" }}>
-            קיבלתי נחשוש פגום (הוא מתנהג כמו חתלתוש){" "}
+            האם ניתן לבטל עסקה או מוצר מסוים לאחר ביצוע הזמנה?
           </Typography>
         </AccordionSummary>
         <AccordionDetails>

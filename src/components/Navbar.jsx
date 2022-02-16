@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import FloatingWhatsApp from "react-floating-whatsapp";
-import Darshiz from "../assets/Darshiz.jpg";
 import { useMediaQuery } from "react-responsive";
 
 const Container = styled.div`
@@ -115,7 +114,7 @@ const Navbar = () => {
             <FloatingWhatsApp
               chatMessage="?היי! איך אפשר לעזור"
               accountName="דרשיז"
-              avatar={Darshiz}
+              avatar={Logo}
               phoneNumber="+972545442928"
               styles={{ zIndex: 100 }}
             />
