@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cb58e7d9.chunk.css",
+    "main.js": "/static/js/main.b6bc4a7f.chunk.js",
+    "main.js.map": "/static/js/main.b6bc4a7f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9412c5a0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9412c5a0.js.map",
+    "static/css/2.4ce9e501.chunk.css": "/static/css/2.4ce9e501.chunk.css",
+    "static/js/2.cb048381.chunk.js": "/static/js/2.cb048381.chunk.js",
+    "static/js/2.cb048381.chunk.js.map": "/static/js/2.cb048381.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4ce9e501.chunk.css.map": "/static/css/2.4ce9e501.chunk.css.map",
+    "static/css/main.cb58e7d9.chunk.css.map": "/static/css/main.cb58e7d9.chunk.css.map",
+    "static/js/2.cb048381.chunk.js.LICENSE.txt": "/static/js/2.cb048381.chunk.js.LICENSE.txt",
+    "static/media/Bag.ee8f5440.png": "/static/media/Bag.ee8f5440.png",
+    "static/media/BottomAbout.ef6cc2df.jpg": "/static/media/BottomAbout.ef6cc2df.jpg",
+    "static/media/Darshiz.2e328383.jpg": "/static/media/Darshiz.2e328383.jpg",
+    "static/media/NoBG.12740d26.png": "/static/media/NoBG.12740d26.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9412c5a0.js",
+    "static/css/2.4ce9e501.chunk.css",
+    "static/js/2.cb048381.chunk.js",
+    "static/css/main.cb58e7d9.chunk.css",
+    "static/js/main.b6bc4a7f.chunk.js"
+  ]
+}
