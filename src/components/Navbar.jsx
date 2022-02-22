@@ -31,7 +31,7 @@ const Left = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
   }
 `;
 
@@ -49,7 +49,7 @@ const Center = styled.div`
   align-items: center;
   @media (min-width: 900px) {
     flex-grow: 15;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: flex-start;
     margin-right: 2em;
   }
@@ -78,7 +78,7 @@ const Titles = styled.div`
   display: flex;
   flex-direction: row-reverse;
   width: 75%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   @media (max-width: 900px) {
     display: none;
   }
@@ -200,6 +200,15 @@ const Navbar = () => {
               }}
             >
               <Title>לקוחות מספרים</Title>
+            </Link>
+            <Link
+              to="/Testimonials"
+              style={{
+                color: "rgb(46, 51, 51)",
+                textDecoration: "inherit",
+              }}
+            >
+              <Title>צור קשר</Title>
             </Link>
           </Titles>
         </Center>

@@ -5,7 +5,7 @@ import Fab from "@mui/material/Fab";
 import FingerprintRoundedIcon from "@mui/icons-material/FingerprintRounded";
 import { login } from "../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 100vh;
@@ -31,6 +31,12 @@ const Wrapper = styled.div`
 const Logo = styled.img`
   height: 120px;
 `;
+
+const SecTitle = styled.h2`
+  font-size: 15px;
+  padding: 0.5em;
+  cursor: pointer;
+`;
 const Form = styled.div`
   display: flex;
   flex-direction: row-reverse;
@@ -48,6 +54,12 @@ const Input = styled.input`
   direction: rtl;
   height: 30px;
   width: 200px;
+`;
+
+const LinkContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 `;
 
 const ButtonContainer = styled.div`
@@ -88,6 +100,18 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form>
+        <LinkContainer>
+          <Link
+            to="/retreivePass"
+            style={{
+              color: "rgb(255, 255, 255)",
+              textDecoration: "inherit",
+              textAlign: "left",
+            }}
+          >
+            <SecTitle>שכחתי ססמא</SecTitle>
+          </Link>{" "}
+        </LinkContainer>
         <ButtonContainer>
           <Fab>
             <FingerprintRoundedIcon fontSize={"large"} onClick={handleClick} />

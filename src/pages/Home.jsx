@@ -23,8 +23,7 @@ function Home() {
     }
     @media (min-width: 900px) {
       height: 30px;
-      background-color: rgb(255, 77, 0);
-      color: white;
+      background-color: rgb(255, 196, 235);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -45,7 +44,7 @@ function Home() {
       <HomeContainer>
         {annState ? (
           <Container>
-            מבצע: משלוח חינם בקנייה מעל 250 ש"ח
+            משלוחים לכל חלקי הארץ{" "}
             <ButtonContainer>
               <Button onClick={handleClose}>X</Button>
             </ButtonContainer>
