@@ -23,7 +23,7 @@ function Home() {
     }
     @media (min-width: 900px) {
       height: 30px;
-      background-color: rgb(255, 196, 235);
+      background-color: rgb(237, 148, 144);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -50,7 +50,7 @@ function Home() {
             </ButtonContainer>
           </Container>
         ) : null}
-        <Navbar />
+          <Navbar />
         {isMobile ? <TopAbout /> : <Slider />}
         <Categories />
         <BottomAbout />
