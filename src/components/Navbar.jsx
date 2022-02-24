@@ -8,15 +8,12 @@ import FloatingWhatsApp from "react-floating-whatsapp";
 import { useMediaQuery } from "react-responsive";
 
 const Container = styled.div`
-    position: relative;
-    z-index: 100;
-box-shadow:
-             0 0  0 2px rgb(255,255,255),
-             0.1em 0.1em 0.5em rgba(0,0,0,0.3);
-}`;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0.1em 0.1em 0.5em rgba(237, 148, 144, 0.7);
+`;
 const Wrapper = styled.div`
   display: flex;
-  padding: 10px 10px 10px 10px;
 `;
 
 const WhatsappCont = styled.div`
@@ -30,11 +27,11 @@ const Center = styled.div`
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  padding-top: 1em;
   @media (min-width: 900px) {
     flex-grow: 15;
     flex-direction: column;
     justify-content: flex-start;
-    margin-right: 2em;
   }
 `;
 
@@ -51,20 +48,26 @@ const Right = styled.div`
 const Titles = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  width: 75%;
-  justify-content: space-between;
+  width: 100%;
+  margin-top: 1em;
+  justify-content: space-evenly;
+  background-color: rgba(237, 148, 144, 0.7);
+  // box-shadow: 0px -5px 15px 2px rgba(237, 148, 144, 0.7);
+  padding: 10px;
   @media (max-width: 900px) {
     display: none;
   }
 `;
 
-const Title = styled.h1`
-  font-size: 21px;
-  font-weight: 100;
-  &:hover {
-    color: grey;
-  }
-`;
+const Title = styled.h1``;
+
+const DropDown = styled.div``;
+
+const DropButton = styled.button``;
+
+const DropDownContent = styled.div``;
+
+const DropDownLink = styled.div``;
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 900px)` });
@@ -87,24 +90,59 @@ const Navbar = () => {
             <img src={Logo} alt="Drashiz baby" height="130px" />
           </Link>
           <Titles>
-            <Link
-              to="/"
-              style={{
-                color: "rgb(46, 51, 51)",
-                textDecoration: "inherit",
-              }}
-            >
-              <Title>מוצרים</Title>
-            </Link>
-            <Link
-              to="/"
-              style={{
-                color: "rgb(46, 51, 51)",
-                textDecoration: "inherit",
-              }}
-            >
-              <Title>מבצעים</Title>
-            </Link>
+            <DropDown className="dropdown">
+              <DropButton className="dropbtn">
+                <Link
+                  to="/"
+                  style={{
+                    color: "rgb(46, 51, 51)",
+                    textDecoration: "inherit",
+                  }}
+                >
+                  <Title className="title">מוצרים</Title>
+                </Link>
+              </DropButton>
+              <DropDownContent className="dropdown-content">
+                <DropDownLink className="dropdown-link">
+                  קוביות משחק
+                </DropDownLink>
+                <DropDownLink className="dropdown-link">
+                  מחזיקי מוצצים
+                </DropDownLink>
+                <DropDownLink className="dropdown-link">
+                  ארגוניות כיסים
+                </DropDownLink>
+                <DropDownLink className="dropdown-link">שמיכות</DropDownLink>
+                <DropDownLink className="dropdown-link">סלסלות</DropDownLink>
+                <DropDownLink className="dropdown-link">
+                  נחשושים - מגן ראש
+                </DropDownLink>
+                <DropDownLink className="dropdown-link">שם התינוק</DropDownLink>
+                <DropDownLink className="dropdown-link">
+                  מארזים ליולדת
+                </DropDownLink>
+              </DropDownContent>
+            </DropDown>
+            <DropDown className="dropdown">
+              <DropButton className="dropbtn">
+                <Link
+                  to="/"
+                  style={{
+                    color: "rgb(46, 51, 51)",
+                    textDecoration: "inherit",
+                  }}
+                >
+                  <Title className="title">מבצעים</Title>
+                </Link>
+              </DropButton>
+              <DropDownContent className="dropdown-content">
+                <DropDownLink className="dropdown-link">
+                  הנחות החודש
+                </DropDownLink>
+                <DropDownLink className="dropdown-link">קופונים</DropDownLink>{" "}
+                <DropDownLink className="dropdown-link">גיפטקארד </DropDownLink>
+              </DropDownContent>
+            </DropDown>
             <Link
               to="/Shipping"
               style={{
@@ -113,7 +151,7 @@ const Navbar = () => {
                 fontWeight: "100",
               }}
             >
-              <Title>משלוחים</Title>
+              <Title className="title">משלוחים</Title>
             </Link>{" "}
             <Link
               to="/FAQ"
@@ -122,7 +160,7 @@ const Navbar = () => {
                 textDecoration: "inherit",
               }}
             >
-              <Title>שאלות נפוצות</Title>
+              <Title className="title">שאלות נפוצות</Title>
             </Link>
             <Link
               to="/Testimonials"
@@ -131,7 +169,7 @@ const Navbar = () => {
                 textDecoration: "inherit",
               }}
             >
-              <Title>לקוחות מספרים</Title>
+              <Title className="title">צור קשר</Title>
             </Link>
             <Link
               to="/Testimonials"
@@ -140,7 +178,7 @@ const Navbar = () => {
                 textDecoration: "inherit",
               }}
             >
-              <Title>צור קשר</Title>
+              <Title className="title">לקוחות מספרים</Title>
             </Link>
           </Titles>
         </Center>
