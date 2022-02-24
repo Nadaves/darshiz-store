@@ -65,7 +65,7 @@ const Footer = () => {
       <Right>
         <Title>יצירת קשר</Title>
         <RightItem>
-          <ItemSeperation>Contact@darshiz.co.il</ItemSeperation>
+          <ItemSeperation>Darshiz.baby@gmail.com</ItemSeperation>
           <MailIcon />
         </RightItem>
         <RightItem>

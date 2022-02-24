@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Shipping from "./pages/Shipping";
 import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/productShowcase/:product" element={<SingleProduct />} />
           <Route path="/Shipping" element={<Shipping />} />
           <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/Testimonials" element={<Testimonials />} />
         </Routes>
       </BrowserRouter>

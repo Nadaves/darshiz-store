@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styled from "styled-components";
-import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
-import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
+// import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+// import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { publicRequest } from "../components/requestMethods";
@@ -13,13 +13,15 @@ import { Navigate } from "react-router-dom";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
-  background-color: rgba(201, 40, 20, 0.15);
+  background-color: rgba(201, 40, 20, 0);
   display: flex;
   justify-content: center;
   height: 90vh;
   padding: 20px;
 `;
-const Image = styled.img``;
+const Image = styled.img`
+  border-radius: 50%;
+`;
 const InfoContainer = styled.div`
   padding: 50px;
   width: 50%;
@@ -33,7 +35,7 @@ const Title = styled.div`
 const Desc = styled.div`
   margin-top: 20px;
   direction: rtl;
-  font-size: 15px;
+  font-size: 20px;
 `;
 const Price = styled.div`
   padding: 10px;
@@ -162,15 +164,15 @@ const Products = () => {
           <Title>{product.title}</Title>
           <Desc>{product.description}</Desc>
           <Price>₪ {product.price}</Price>
-          <Filter>
+          {/* <Filter>
             <Desc>צבעים</Desc>
             <Colors>
               {productColors.map((item) => (
                 <Color color={item} onClick={() => handleColor(item)}></Color>
               ))}
             </Colors>
-          </Filter>
-          <PurchaseControl>
+          </Filter> */}
+          {/* <PurchaseControl>
             <QuantityContainer>
               <QuantitySign onClick={() => handleClick("remove")}>
                 <RemoveOutlinedIcon />
@@ -181,7 +183,10 @@ const Products = () => {
               </QuantitySign>
             </QuantityContainer>
             <Button onClick={handleButton}>הוסף לעגלה</Button>
-          </PurchaseControl>
+          </PurchaseControl> */}
+          <Filter>
+            {/* <h2>דוגמאות:</h2> */}
+          </Filter>
           {alert ? <Alert severity="error">בחר צבע</Alert> : null}
         </InfoContainer>
       </Wrapper>

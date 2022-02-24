@@ -93,7 +93,7 @@ const Navbar = () => {
             <DropDown className="dropdown">
               <DropButton className="dropbtn">
                 <Link
-                  to="/"
+                  to="/products/allProducts"
                   style={{
                     color: "rgb(46, 51, 51)",
                     textDecoration: "inherit",
@@ -103,24 +103,66 @@ const Navbar = () => {
                 </Link>
               </DropButton>
               <DropDownContent className="dropdown-content">
-                <DropDownLink className="dropdown-link">
-                  קוביות משחק
-                </DropDownLink>
-                <DropDownLink className="dropdown-link">
-                  מחזיקי מוצצים
-                </DropDownLink>
-                <DropDownLink className="dropdown-link">
-                  ארגוניות כיסים
-                </DropDownLink>
-                <DropDownLink className="dropdown-link">שמיכות</DropDownLink>
-                <DropDownLink className="dropdown-link">סלסלות</DropDownLink>
-                <DropDownLink className="dropdown-link">
-                  נחשושים - מגן ראש
-                </DropDownLink>
-                <DropDownLink className="dropdown-link">שם התינוק</DropDownLink>
-                <DropDownLink className="dropdown-link">
-                  מארזים ליולדת
-                </DropDownLink>
+                <Link
+                  to="/productShowcase/62177f3627cdcdde116d6e8d"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">
+                    קוביות משחק
+                  </DropDownLink>
+                </Link>
+                <Link
+                  to="/productShowcase/621784d627cdcdde116d6e91"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">
+                    מחזיקי מוצצים
+                  </DropDownLink>
+                </Link>
+                <Link
+                  to="/productShowcase/62177e8227cdcdde116d6e8b"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">
+                    ארגוניות כיסים
+                  </DropDownLink>
+                </Link>
+                <Link
+                  to="/productShowcase/62177ff727cdcdde116d6e8e"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">שמיכות</DropDownLink>
+                </Link>
+                <Link
+                  to="/productShowcase/62177edb27cdcdde116d6e8c"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">סלסלות</DropDownLink>
+                </Link>
+                <Link
+                  to="/productShowcase/61b1185074870f5e8c2c555b"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">
+                    נחשושים - מגן ראש
+                  </DropDownLink>
+                </Link>
+                <Link
+                  to="/productShowcase/6217807c27cdcdde116d6e8f"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">
+                    מארזים ליולדת
+                  </DropDownLink>
+                </Link>
+                <Link
+                  to="/productShowcase/6217821f27cdcdde116d6e90"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">
+                    התאמה אישית
+                  </DropDownLink>
+                </Link>
               </DropDownContent>
             </DropDown>
             <DropDown className="dropdown">
@@ -152,7 +194,7 @@ const Navbar = () => {
               }}
             >
               <Title className="title">משלוחים</Title>
-            </Link>{" "}
+            </Link>
             <Link
               to="/FAQ"
               style={{
@@ -163,7 +205,7 @@ const Navbar = () => {
               <Title className="title">שאלות נפוצות</Title>
             </Link>
             <Link
-              to="/Testimonials"
+              to="/Contact"
               style={{
                 color: "rgb(46, 51, 51)",
                 textDecoration: "inherit",
