@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://159.223.28.5:5000/api";
+const BASE_URL = "http://localhost:5000/api";
 const TOKEN = JSON.parse;
 JSON.parse(localStorage.getItem("persist:root"));
 
