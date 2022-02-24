@@ -205,15 +205,6 @@ const Navbar = () => {
               <Title className="title">שאלות נפוצות</Title>
             </Link>
             <Link
-              to="/Contact"
-              style={{
-                color: "rgb(46, 51, 51)",
-                textDecoration: "inherit",
-              }}
-            >
-              <Title className="title">צור קשר</Title>
-            </Link>
-            <Link
               to="/Testimonials"
               style={{
                 color: "rgb(46, 51, 51)",
