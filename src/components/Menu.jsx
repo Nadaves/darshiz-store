@@ -92,47 +92,69 @@ function MainMenu() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <MenuItem>
-          <TextContainer>
-            <Typography>מוצרים</Typography>
-          </TextContainer>
-          <IconContainer>
-            <LoyaltyIcon />
-          </IconContainer>
-        </MenuItem>
-        <MenuItem>
-          <TextContainer>
-            <Typography>מבצעים</Typography>
-          </TextContainer>
-          <IconContainer>
-            <LocalFireDepartmentIcon />
-          </IconContainer>
-        </MenuItem>
-        <MenuItem>
-          <TextContainer>
-            <Typography>משלוחים</Typography>
-          </TextContainer>
-          <IconContainer>
-            <LocalShippingIcon />
-          </IconContainer>
-        </MenuItem>
-        <MenuItem>
-          <TextContainer>
-            <Typography>שאלות נפוצות</Typography>
-          </TextContainer>
-          <IconContainer>
-            <QuizIcon />
-          </IconContainer>
-        </MenuItem>
-        <MenuItem>
-          <TextContainer>
-            <Typography>צור קשר</Typography>
-          </TextContainer>
-          <IconContainer>
-            <CallIcon />
-          </IconContainer>
-        </MenuItem>
-        <Divider />
+        <Link
+          to="/products/All"
+          style={{ textDecoration: "inherit", color: "black" }}
+        >
+          <MenuItem>
+            <TextContainer>
+              <Typography>מוצרים</Typography>
+            </TextContainer>
+            <IconContainer>
+              <LoyaltyIcon />
+            </IconContainer>
+          </MenuItem>
+        </Link>
+        <Link
+          to="/products/All"
+          style={{ textDecoration: "inherit", color: "black" }}
+        >
+          <MenuItem>
+            <TextContainer>
+              <Typography>מבצעים</Typography>
+            </TextContainer>
+            <IconContainer>
+              <LocalFireDepartmentIcon />
+            </IconContainer>
+          </MenuItem>
+        </Link>
+        <Link
+          to="/Shipping"
+          style={{ textDecoration: "inherit", color: "black" }}
+        >
+          <MenuItem>
+            <TextContainer>
+              <Typography>משלוחים</Typography>
+            </TextContainer>
+            <IconContainer>
+              <LocalShippingIcon />
+            </IconContainer>
+          </MenuItem>
+        </Link>
+        <Link to="/FAQ" style={{ textDecoration: "inherit", color: "black" }}>
+          <MenuItem>
+            <TextContainer>
+              <Typography>שאלות נפוצות</Typography>
+            </TextContainer>
+            <IconContainer>
+              <QuizIcon />
+            </IconContainer>
+          </MenuItem>
+        </Link>
+        <Link
+          to="/Testimonials"
+          style={{ textDecoration: "inherit", color: "black" }}
+        >
+          <MenuItem>
+            <TextContainer>
+              <Typography>לקוחות מספרים</Typography>
+            </TextContainer>
+            <IconContainer>
+              <CallIcon />
+            </IconContainer>
+          </MenuItem>
+        </Link>
+        {/* <Divider />
         {user && (
           <MenuItem onClick={handleLogout}>
             <TextContainer>התנתק</TextContainer>
@@ -140,8 +162,8 @@ function MainMenu() {
               <Logout />
             </IconContainer>
           </MenuItem>
-        )}
-        {!user && (
+        )} */}
+        {/* {!user && (
           <>
             <Link
               to="/login"
@@ -166,7 +188,7 @@ function MainMenu() {
               </MenuItem>
             </Link>
           </>
-        )}
+        )} */}
       </Menu>
     </React.Fragment>
   );

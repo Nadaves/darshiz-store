@@ -24,8 +24,8 @@ const WhatsappCont = styled.div`
 
 const Center = styled.div`
   display: flex;
-  flex-grow: 1;
-  justify-content: center;
+  flex-grow: 2;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 1em;
   @media (min-width: 900px) {
