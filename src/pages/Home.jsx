@@ -3,7 +3,9 @@ import Navbar from "../components/Navbar.jsx";
 import styled from "styled-components";
 // import { Button } from "@material-ui/core";
 import Slider from "../components/Slider";
+import ConstSlider from "../components/ConstSlider";
 import Categories from "../components/Categories";
+import Slideshow from "../components/Slideshow.jsx";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
 import MobileAccordion from "../components/MobileAccordion";
@@ -51,8 +53,8 @@ function Home() {
           </Container>
         ) : null} */}
         <Navbar />
-        {isMobile ? <TopAbout /> : <Slider />}
-        <Categories />
+        {isMobile ? <TopAbout /> : <ConstSlider />}
+        <Slideshow />
         <BottomAbout />
         {/* <Products /> */}
         {isMobile ? (

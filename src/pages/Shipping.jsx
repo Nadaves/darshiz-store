@@ -23,7 +23,9 @@ function Shipping() {
               <div class="pricing-spacing">
                 <h2 class="pricing-header">איסוף עצמי</h2>
                 <ul class="pricing-features">
-                  <li class="pricing-features-item">איסוף עצמי מגבעת שמואל</li>
+                  <li class="pricing-features-item">
+                    איסוף עצמי מגבעת שמואל בתיאום מראש
+                  </li>
                 </ul>
               </div>
               <span class="pricing-price">₪0</span>
@@ -38,8 +40,8 @@ function Shipping() {
               <div class="pricing-spacing">
                 <h2 class="pricing-header">שליח עד הבית</h2>
                 <ul class="pricing-features">
-                  <li class="pricing-features-item">משלוח לכל הארץ</li>
-                  <li class="pricing-features-item">עד 14 ימי עסקים*</li>
+                  <li class="pricing-features-item">משלוחים לכל הארץ</li>
+                  <li class="pricing-features-item">עד 7 ימי עסקים*</li>
                 </ul>
               </div>
               <span class="pricing-price">₪30</span>
@@ -52,13 +54,15 @@ function Shipping() {
                 class="pricing-img"
               />
               <div class="pricing-spacing">
-                <h2 class="pricing-header">משלוח אקספרס</h2>
+                <h2 class="pricing-header">Boxit משלוח</h2>
                 <ul class="pricing-features">
-                  <li class="pricing-features-item">מוגבל לאזור גוש דן</li>
-                  <li class="pricing-features-item">עד שלושה ימי עסקים*</li>
+                  <li class="pricing-features-item">
+                    איסוף עצמי מנקודות Boxit ברחבי הארץ
+                  </li>
+                  <li class="pricing-features-item">עד 3 ימי עסקים </li>
                 </ul>
               </div>
-              <span class="pricing-price">₪50</span>
+              <span class="pricing-price">₪20</span>
             </div>
           </div>
         </div>

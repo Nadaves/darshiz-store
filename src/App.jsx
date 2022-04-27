@@ -1,6 +1,7 @@
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import SingleProduct from "./pages/SingleProduct";
+import Bundle from "../src/pages/Bundle";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
@@ -27,6 +28,7 @@ const App = () => {
             path="/Register"
             element={user ? <Navigate to="/" /> : <Register />}
           />
+          <Route path="/Products/bundle" element={<Bundle />} />
           <Route path="/Products/:category" element={<ProductList />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/productShowcase/:product" element={<SingleProduct />} />

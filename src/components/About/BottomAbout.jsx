@@ -20,7 +20,7 @@ const InfoContainer = styled.div`
   color: black;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
   direction: rtl;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,7 @@ const InfoContainer = styled.div`
 
 const Description = styled.p`
   font-weight: 100;
-  font-size: 17px;
+  font-size: 18px;
   margin: 10px auto;
 `;
 
@@ -55,16 +55,18 @@ function About() {
       <InfoContainer>
         <Title>על "דרשיז"</Title>
         <Description>
-          סוף סוף, מקום קטן משלי. נעים להכיר, קוראים לי אשליז ואני שמחה שהגעתם
-          לבקר. המקום הזה, שאני קוראת לו בית, שלכם בדיוק כפי שהוא שלי. אני יותר
-          מאשמח אם תכנסו ותשוטטו, תסתכלו ותקנו ובעיקר תרוצו לספר לכל הדודות
-          שלכם, כי הן הלקוחות הכי טובות. מבטיחה לכם הנאה גדולה וטונות של סיפוק.
+          סוף סוף, מקום קטן משלי. נעים להכיר, קוראים לי חן ואני שמחה שהגעתם
+          לבקר. תמיד אהבתי ליצור ולפנק, מה שהוביל אותי ליצור את "דרשיז". המקום
+          הזה, שאני קוראת לו בית, שלכם בדיוק כפי שהוא שלי. אני יותר מאשמח אם
+          תכנסו ותשוטטו, תסתכלו ותקנו ובעיקר תרוצו לספר לכל הדודות שלכם, כי הן
+          הלקוחות הכי טובות. מבטיחה לכם הנאה גדולה, אלף מחמאות וערמות של סיפוק.
+          תהנו😊
         </Description>
         <Description>
-          סוף סוף, מקום קטן משלי. נעים להכיר, קוראים לי אשליז ואני שמחה שהגעתם
-          לבקר. המקום הזה, שאני קוראת לו בית, שלכם בדיוק כפי שהוא שלי. אני יותר
-          מאשמח אם תכנסו ותשוטטו, תסתכלו ותקנו ובעיקר תרוצו לספר לכל הדודות
-          שלכם, כי הן הלקוחות הכי טובות. מבטיחה לכם הנאה גדולה וטונות של סיפוק.
+          כל המוצרים שלי שלי נעשים בעבודת יד, בתפירה אישית מלב אל לב, לכם רק
+          נשאר להנות מהקטנטנים שלכם! המוצרים נתפרים מבדים איכותיים, ביניהם בדי
+          פליז, קרפ, טטרה ו-100% כותנה. ניתן לכבס את מהוצרים במכונת כביסה,
+          בתכנית של כביסה עדינה ללא סחיטה ולייבש בצל.
         </Description>
       </InfoContainer>
       <Fader />

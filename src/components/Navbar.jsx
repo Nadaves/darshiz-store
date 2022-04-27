@@ -92,17 +92,17 @@ const Navbar = () => {
           <Titles>
             <DropDown className="dropdown">
               <DropButton className="dropbtn">
-                <Link
-                  to="/products/allProducts"
-                  style={{
-                    color: "rgb(46, 51, 51)",
-                    textDecoration: "inherit",
-                  }}
-                >
-                  <Title className="title">מוצרים</Title>
-                </Link>
+                <Title className="title">מוצרים</Title>
               </DropButton>
               <DropDownContent className="dropdown-content">
+                <Link
+                  to="/Products/bundle"
+                  style={{ textDecoration: "inherit" }}
+                >
+                  <DropDownLink className="dropdown-link">
+                    מארזים ליולדת
+                  </DropDownLink>
+                </Link>
                 <Link
                   to="/productShowcase/62177f3627cdcdde116d6e8d"
                   style={{ textDecoration: "inherit" }}
@@ -144,15 +144,15 @@ const Navbar = () => {
                   style={{ textDecoration: "inherit" }}
                 >
                   <DropDownLink className="dropdown-link">
-                    נחשושים - מגן ראש
+                    נחשוש - מגן ראש
                   </DropDownLink>
                 </Link>
                 <Link
-                  to="/productShowcase/6217807c27cdcdde116d6e8f"
+                  to="/productShowcase/6269747e1862eec0eb179075"
                   style={{ textDecoration: "inherit" }}
                 >
                   <DropDownLink className="dropdown-link">
-                    מארזים ליולדת
+                    סינר לתינוק
                   </DropDownLink>
                 </Link>
                 <Link
@@ -160,12 +160,12 @@ const Navbar = () => {
                   style={{ textDecoration: "inherit" }}
                 >
                   <DropDownLink className="dropdown-link">
-                    התאמה אישית
+                    הדפסת שם
                   </DropDownLink>
                 </Link>
               </DropDownContent>
             </DropDown>
-            <DropDown className="dropdown">
+            {/* <DropDown className="dropdown">
               <DropButton className="dropbtn">
                 <Link
                   to="/"
@@ -184,7 +184,7 @@ const Navbar = () => {
                 <DropDownLink className="dropdown-link">קופונים</DropDownLink>{" "}
                 <DropDownLink className="dropdown-link">גיפטקארד </DropDownLink>
               </DropDownContent>
-            </DropDown>
+            </DropDown> */}
             <Link
               to="/Shipping"
               style={{
@@ -195,7 +195,7 @@ const Navbar = () => {
             >
               <Title className="title">משלוחים</Title>
             </Link>
-            <Link
+            {/* <Link
               to="/FAQ"
               style={{
                 color: "rgb(46, 51, 51)",
@@ -203,7 +203,7 @@ const Navbar = () => {
               }}
             >
               <Title className="title">שאלות נפוצות</Title>
-            </Link>
+            </Link> */}
             <Link
               to="/Testimonials"
               style={{

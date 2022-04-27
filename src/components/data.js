@@ -1,9 +1,9 @@
-import Darshiz from "../assets/Darshiz.jpg"
+import Darshiz from "../assets/Darshiz.jpg";
 
 export const SliderItems = [
   {
     id: 1,
-    img: "https://images.pexels.com/photos/1648374/pexels-photo-1648374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: "https://i.postimg.cc/1X5BsLfG/Sinar.png",
     title: "ברוכים הבאים לדרשיז",
     desc: "כאן תוכלו למצוא מגוון רחב של מוצרי תינוקות איכותיים ומפנקים בעבודת יד. כל מוצרי הבד נתפרים ממיטב חומרי הגלם ותוך תשומת לב מירבית לפרטים ולרמת הגימור",
     link: "לצפייה במוצרים",

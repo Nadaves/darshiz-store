@@ -38,6 +38,7 @@ const Right = styled.div`
 const RightItem = styled.div`
   display: flex;
   margin: 0.2rem;
+  font-size: 20px;
 `;
 
 const ItemSeperation = styled.div`
@@ -47,6 +48,9 @@ const Title = styled.h1`
 font-weight: 100;
 font-size 25px;
 `;
+const Link = styled.a`
+  color: inherit;
+`;
 
 const Footer = () => {
   return (
@@ -54,12 +58,16 @@ const Footer = () => {
       <Left>
         <Logo>Darshiz baby.</Logo>
         <LinksContainer>
-          <SocialItem>
-            <InstagramIcon />
-          </SocialItem>
-          <SocialItem>
-            <FacebookIcon />
-          </SocialItem>
+          <Link href="https://instagram.com/invites/contact/?i=2pc23sb1xkla&utm_content=n3czjiq%E2%80%8E%E2%80%8F">
+            <SocialItem>
+              <InstagramIcon />
+            </SocialItem>
+          </Link>
+          <Link href="https://www.facebook.com/Darshiz.baby/">
+            <SocialItem>
+              <FacebookIcon />
+            </SocialItem>
+          </Link>
         </LinksContainer>
       </Left>
       <Right>
